@@ -1,0 +1,109 @@
+body{
+    margin:0px;
+    background-image: url("/media/background.png");
+    background-size: 20%;
+    overflow-x: hidden;
+  }
+.cover{
+  position: absolute;
+  z-index: 1;
+  border: 1px solid   #000;
+}
+.foreground{
+  position: relative;
+  z-index: 3;
+}
+#mainContentContainer{
+  display: flex;
+  align-items: stretch;
+  align-content:center  ;
+}
+  @font-face {
+    font-family: 'wartextregular';
+    src: url('wartext-webfont.woff2') format('woff2'),
+         url('wartext-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  #rotatedBox{  
+    top: 0;
+    background: #FFFFFF;
+    width: 100%;
+    clip-path: polygon(90% 0, 0 0, 0 90%);
+    height: 100%;
+  }
+  @media only screen and (max-width: 768px) {
+    #rotatedBox {
+    clip-path: polygon(0 0, 100% 0, 100% 25%, 0% 100%);
+    }
+  }
+  #titleContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 100px;
+    margin: auto;
+    position: relative;
+    margin-top: 20px;
+    background-position: center;
+    background-image: url("/media/titleDecor.png");
+    background-repeat:no-repeat;
+    background-size: contain;
+  }
+  #title{
+    text-align: center;
+    color: #000;
+    font-size: 27px ;
+    font-weight: 400;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  #linkTable{
+    max-width: 300px;
+    margin: 4%;
+    flex-grow: 1;
+    padding: 5%;
+    padding: 10px;
+    height: 65vh;
+    border: 1px solid #000;
+    background-color: white;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+  }
+  #listElement{
+    margin: 15px 15px 15px 20px;
+  }
+  #introductionTable{
+    margin: 10%;
+    padding: 30px;
+    border: 1px solid #000;
+    flex-grow:2;
+    background-color: white;
+    box-shadow: 10px 10px 14px rgba(0, 0, 0, 0.3);
+  }
+  #aboutUsContainer{
+    margin-top: 6vh;
+    padding-bottom: 3vh;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+  }
+  #aboutUs{
+    background-color: white;
+    box-shadow: 10px 10px 14px rgba(0, 0, 0, 0.3);
+    border: 1px solid #000;
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  ::-webkit-scrollbar{
+  width:5px;
+  }
+  ::-webkit-scrollbar-track{
+  background-color:rgba(0, 0, 0, 0);
+  }
+  ::-webkit-scrollbar-thumb{
+  background-color:black;
+  width: 3px;
+  
+  }
