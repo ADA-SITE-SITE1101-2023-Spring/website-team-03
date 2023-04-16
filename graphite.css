@@ -4,12 +4,39 @@ body{
     background-size: 20%;
     overflow-x: hidden;
   }
+a{
+  color: #8d7fd4;
+}
+a:visited{
+  color: 	#7851A9;
+}
 img{
   height: 200px;
   object-fit: fill;
   padding: 10px;
   margin: 5px;
   border: 1px solid #000;
+  background-color: white;
+}
+h1{
+  margin-left: 0.5em;
+  margin-block-start: 0.37em;
+}
+p,h2{
+  font-family: 'Times New Roman', Times, serif;
+}
+p{
+  text-indent: 1.5em;
+  line-height: 1.2em;
+}
+#audio{
+  z-index: 11;
+  width: 120px;
+  height: 40px;
+  position: fixed;
+  top: 1px;
+  left: 1px;
+  border: none;
   background-color: white;
 }
 #box{
@@ -22,12 +49,11 @@ img{
 }
 .cover{
   position: absolute; 
-  z-index: 1;
-  border: 1px solid   #000;
+  z-index:1;
 }
 .foreground{
   position: relative;
-  z-index: 3;
+  z-index:10;
 }
 #mainContentContainer{
   width: 100%;
@@ -38,11 +64,18 @@ img{
   align-content:center;
 }
 #growLogoContainer{     
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items:center;
+}
+#growDescriptionContainer{     
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  align-content: center ;
+  align-items: flex-start;
+  align-content: flex-start;
 }
 #growGalleryContainer{     
   flex: 3;
@@ -50,14 +83,13 @@ img{
   padding-left:30px;
 }
 #logo{
-  margin-top: 15%;
-  width:40%;
-  aspect-ratio: 1;
-  background-color:black;
+  top:-30px;
+  width:300px;
+  height: auto;
 }
 #teamEffortContainer{
   margin-left:10%;
-  margin-top:12%;
+  margin-top:15%;
   width: 50%;
 }
 #gallery{
@@ -71,18 +103,24 @@ img{
   padding: 10px;
 }
 #growIntroductionContainer{
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#basicGrowingContainer{
   flex: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-#growBioContainer{
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+#hourofCodeDescriptionContainer{
+  margin-top: 50px;
+  margin-left:50px;
+  width:460px;
+  align-items: flex-start;
 }
 .extraBorder{
   padding:8px;
@@ -91,16 +129,23 @@ img{
   box-shadow: 10px 10px 14px rgba(0, 0, 0, 0.3);
 }
 #bioContainer{
-  background-size: 100%;
-  margin: auto;
   padding:13px;
   background-color: white;
   font-size: 1.3em;
   border: 1px solid #000;
 }
 #introductionContainer{
-  padding: 30px;
-  font-size: 1.3em;
+  padding: 0 0.67em;
+  border: 1px solid #000;
+  background-color: white;
+}
+#videoContainer{
+  padding: 0.67em 0.67em;
+  border: 1px solid #000;
+  background-color: white;
+}
+
+#exampleContainer{
   border: 1px solid #000;
   background-color: white;
 }
@@ -122,14 +167,28 @@ img{
   #rotatedBox {
   clip-path: polygon(0 0, 100% 0, 100% 25%, 0% 100%);
   }
-  #introductionContainer{ 
-    font-size: 1em; 
-    margin-top: 13%;
+  *{
+    font-size:15px;
+  }
+  #logo{
+    width: 150px;
+
   }
   img{
     height: 70px;
   }
-
+  p{
+    font-size:10px;
+  }
+  #bioContainer{
+    font-size:0.7em ;
+  }
+  #growGalleryContainer{
+    flex:1;
+  }
+  #nameContainer{
+    margin:auto;
+  }
 }
 #titleContainer{
   display: flex;
@@ -146,8 +205,7 @@ img{
   background-size: contain;
 }
 #nameContainer{
-  margin-left:4%; 
-  margin-top: 4%;
+  margin-top: 3%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -173,7 +231,6 @@ img{
   margin-top: 6vh;
   padding-bottom: 3vh;
   width: 100%;
-  position: absolute;
   display: flex;
   justify-content: center;
 }
@@ -195,4 +252,36 @@ background-color:rgba(0, 0, 0, 0);
 background-color:black;
 width: 3px;
 
+}
+
+#animationContainer{
+  height:31px;
+  width:270px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#cursor{
+  background-color:black;
+  width:2px; 
+  height:25px;
+  animation-name:glitter;
+  animation-delay: 0s;
+  animation-duration:0.5s;
+  animation-timing-function: steps(  1, end);
+  animation-iteration-count: infinite;
+}
+
+@keyframes glitter{
+  0%{
+      background-color:black;
+  } 
+  50%{
+      background-color:white;
+  }
+  100%{
+      background-color:black;
+  }
 }

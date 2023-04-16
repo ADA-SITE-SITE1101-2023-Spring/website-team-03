@@ -11,31 +11,46 @@
     <title>Homework 3: How websites work?</title>    
     <link rel="stylesheet" href="graphite.css" type="text/css" />
   </head>
-  <body>
+  <body>  
+    <div id="audioContainer">
+      <iframe src="/media/audio/audio.html" allow="autoplay" id="audio"></iframe>  
+    </div>
     <div class="foreground">
       <div id="titleContainer">
-        <div id="title">Welcome to Team <strong>Mono</strong></div>
+        <div id="animationContainer">
+          <div id="title"></div>
+          <div id="cursor"></div>
+        </div>
       </div>
     </div>
     <div class="cover" id="rotatedBox"></div>
   <div class="foreground" id="mainContentContainer">
     <div id="growLogoContainer" >
-      <div id="logo">place logo</div>
+      <img src="/media/logo.jpg" alt="team logo" style="border:none;" id="logo">
        </div>
     <div id="growIntroductionContainer">
-      <div class="extraBorder" style="margin-top: 20%; margin-bottom: 4%; margin-right: 4%; margin-left: 10%;">
+      <div class="extraBorder" style="margin-top: 14%; margin-bottom: 4%; margin-right: 17%; ">
         <div class="foreground" id="introductionContainer">
-         Team Introduction: Team Mono is an aspiring group of university students by Agshin Hasanov, Rufat Mammadov, and Yusif Ashurov, who are pursuing their education at ADA University's School of Information Technology and Engineering (SITE). Fueled by enthusiasm for computer science and a commitment to motivate younger generations, they recently arranged an Hour of Code gathering for school students. Through this event, they facilitated an appealing, hands-on experience to pique curiosity in programming among the youngsters. This website is a further step in their development on the journey to become future experts in their own respective fields. Merging their individual skills and making the best out of their SITE education, they undertook the task to make a simple yet elegant website.</div>
+          <p style="font-size: large;">An aspiring group of university students by Agshin Hasanov, Rufat Mammadov, and Yusif Ashurov, who are pursuing their education at ADA University's School of Information Technology and Engineering (SITE). Fueled by enthusiasm for computer science and a commitment to motivate younger generations, they recently arranged an Hour of Code gathering for school students. Through this event, they facilitated an appealing, hands-on experience to pique curiosity in programming among the youngsters. This website is a further step in their development on the journey to become future experts in their own respective fields. Merging their individual skills and making the best out of their SITE education, they undertook the task to make a simple yet elegant website.</p>
+            </div>
       </div>
     </div>
   </div>
-    <div style="width:100vw;height:60vh;">
+    <div style="width:100vw;" class="foreground">
       <div id="teamEffortContainer">
         <div class="extraBorder">
           <div style="border:1px solid black; padding: 10px;">
-            <div style="font-size: 25px; font-weight: 500;">Team <strong>Mono</strong> efforts</div>
-            <div id="listElement">Hour of Code:Explore, Play, Create! The Hour of Code, initiated by Code.org, is a global event aimed at making computer science accessible through self-guided tutorials.</div>
-         <div id="listElement">Website project: Team Mono from ADA University (SITE1101) created a website using HTML, CSS, and JavaScript that they learned from Codeacademy.</div>
+            <h1>Team Mono Efforts </h1>
+            <ul>
+              <li>
+                <h2><a href="hourofcode.html">Hour of Code: Explore, Play, Create!</a></h2>
+                <p>The Hour of Code, initiated by Code.org, is a global event aimed at making computer science accessible through self-guided tutorials.</p>
+              </li>
+              <li>
+                <h2><a href="website.html">Website project: The Web and Education</a></h2>
+                <p>Team Mono from ADA University (SITE1101) created a website using HTML, CSS, and JavaScript that they learned from Codeacademy.</p>
+              </li>
+            </ul>
         </div>
         </div>
       </div>
@@ -43,7 +58,7 @@
   <div class="foreground" id="aboutUsContainer">
     <div id="aboutUs">
       <div style="text-align:center">
-        About Us:
+        <strong>About Us:</strong>
         <div><a href="/rmammadov.html">Rufat Mammadov <strong>email:</strong>rmammadov17936@ada.edu.az</a></div>
         <div><a href="/agasanov.html">Agshin Gasanov <strong>email:</strong>ahasanov18138@ada.edu.az</a></div>
         <div><a href="/yashrafov.html">Yusif Ashrafov <strong>email:</strong>yashrafov@ada.edu.az</a></div>

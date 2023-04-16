@@ -1,0 +1,40 @@
+body{
+    margin:0;   
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    
+}
+.controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.previous-song-button {
+    background-color: transparent;
+    border: 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+.next-song-button {
+    background-color: transparent;
+    border: 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    padding: 0;
+  }
+.sound-button {
+    background-color: transparent;
+    border: 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    padding: 0;
+}
